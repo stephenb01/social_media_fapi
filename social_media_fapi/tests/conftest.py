@@ -5,11 +5,13 @@ import pytest
 from fastapi.testclient import TestClient
 from httpx import ASGITransport, AsyncClient
 
-from social_media_fapi.routers.post import comment_table, post_table
+
+
 
 # This is used to overwrite the main envrionment settings by setting the envrionment to use test database.
 os.environ["ENV_STATE"] = "test"
 
+from social_media_fapi.database import database # noqa: E402 
 # the # noqa: E402  tells the ruff linter to ignore the rule to put this import to the top of hte file.
 from social_media_fapi.main import app # noqa: E402 
 
@@ -34,9 +36,9 @@ def client() -> Generator:
 # The autouse=True ensures this is run on every test.
 @pytest.fixture(autouse=True)
 async def db() -> AsyncGenerator:
-    post_table.clear()
-    comment_table.clear()
+    await database.connect()
     yield
+    await database.disconnect()
 
 
 @pytest.fixture()
