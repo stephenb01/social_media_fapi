@@ -1,0 +1,108 @@
+import pytest
+from httpx import AsyncClient
+
+"""
+To run the tests go into the social_media_fapi (the top one) and run: pytest.
+To see all the fixtures run:  pytest --fixtures
+To see what fixtures each test used run: pytest --fixtures-per-test
+"""
+
+
+async def create_post(body: str, async_client: AsyncClient) -> dict:
+    response = await async_client.post("/post", json={"body": body})
+    return response.json()
+
+
+async def create_comment(body: str, post_id: int, async_client: AsyncClient) -> dict:
+    response = await async_client.post(
+        "/comment", json={"body": body, "post_id": post_id}
+    )
+    return response.json()
+
+
+@pytest.fixture()
+async def created_post(async_client: AsyncClient):
+    return await create_post("Test Post", async_client)
+
+
+@pytest.fixture()
+async def created_comment(async_client: AsyncClient, created_post: dict):
+    return await create_comment("Test Comment", created_post["id"], async_client)
+
+
+# This is the tests.
+@pytest.mark.anyio
+async def test_create_post(async_client: AsyncClient):
+    body = "Test Post"
+
+    response = await async_client.post("/post", json={"body": body})
+
+    assert response.status_code == 201
+    assert {"id": 0, "body": body}.items() <= response.json().items()
+
+
+@pytest.mark.anyio
+async def test_create_post_missing_data(async_client: AsyncClient):
+    response = await async_client.post("/post", json={})
+
+    # This should fail as th request requires a body.
+    # assert response.status_code == 201
+    # So we change it to the correct response which is 422
+    assert response.status_code == 422
+
+
+@pytest.mark.anyio
+async def test_get_all_posts(async_client: AsyncClient, created_post: dict):
+    response = await async_client.get("/post")
+
+    assert response.status_code == 200
+    assert response.json() == [created_post]
+
+
+@pytest.mark.anyio
+async def test_create_comment(async_client: AsyncClient, created_post: dict):
+    body = "Test Comment"
+
+    response = await async_client.post(
+        "/comment", json={"body": body, "post_id": created_post["id"]}
+    )
+    assert response.status_code == 201
+    assert {"id": 0, "body": body}.items() <= response.json().items()
+
+
+@pytest.mark.anyio
+async def test_get_comments_on_post(
+    async_client: AsyncClient, created_post: dict, created_comment: dict
+):
+    response = await async_client.get(f"/post/{created_post['id']}/comment")
+    assert response.status_code == 200
+    # This is what we are expecting back from the endpoint: a list of comments: [created_comment]
+    assert response.json() == [created_comment]
+
+
+@pytest.mark.anyio
+async def test_get_comments_on_post_empty(
+    async_client: AsyncClient, created_post: dict
+):
+    response = await async_client.get(f"/post/{created_post['id']}/comment")
+    assert response.status_code == 200
+    # This is what we are expecting back from the endpoint: a list of comments: [created_comment]
+    assert response.json() == []
+
+
+@pytest.mark.anyio
+async def test_get_post_with_comments(
+    async_client: AsyncClient, created_post: dict, created_comment: dict
+):
+    response = await async_client.get(f"/post/{created_post['id']}")
+    assert response.status_code == 200
+    assert response.json() == {"post": created_post, "comments": [created_comment]}
+
+@pytest.mark.anyio
+async def test_get_missing_post_with_comments(
+    async_client: AsyncClient, created_post: dict, created_comment: dict
+):
+    response = await async_client.get("/post/2")
+
+    assert response.status_code == 404
+
