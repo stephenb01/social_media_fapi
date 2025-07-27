@@ -1,0 +1,592 @@
+2025-07-27T09:31:11.807Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:31:21.848Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:31:21.949Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:31:21.952Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:31:21.954Z | INFO     | uvicorn.error:94 - Finished server process [779309]
+2025-07-27T09:31:25.005Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:31:43.470Z | DEBUG    | social_media_fapi.routers.post:38 - SELECT posts.id, posts.body 
+FROM posts
+2025-07-27T09:31:43.473Z | INFO     | uvicorn.access:476 - 127.0.0.1:46450 - "GET /post HTTP/1.1" 200
+2025-07-27T09:32:43.828Z | DEBUG    | social_media_fapi.routers.post:38 - SELECT posts.id, posts.body 
+FROM posts
+2025-07-27T09:32:43.831Z | INFO     | uvicorn.access:476 - 127.0.0.1:38758 - "GET /post HTTP/1.1" 200
+2025-07-27T09:48:40.278Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:48:40.389Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:48:40.398Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:48:40.400Z | INFO     | uvicorn.error:94 - Finished server process [779580]
+2025-07-27T09:48:40.878Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:48:42.684Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:48:42.785Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:48:42.786Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:48:42.787Z | INFO     | uvicorn.error:94 - Finished server process [794777]
+2025-07-27T09:48:43.220Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:48:46.030Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:48:46.132Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:48:46.133Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:48:46.134Z | INFO     | uvicorn.error:94 - Finished server process [794835]
+2025-07-27T09:48:49.499Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:04.839Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:04.941Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:04.942Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:04.943Z | INFO     | uvicorn.error:94 - Finished server process [795016]
+2025-07-27T09:49:05.397Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:06.202Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:06.304Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:06.305Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:06.307Z | INFO     | uvicorn.error:94 - Finished server process [795339]
+2025-07-27T09:49:06.764Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:11.081Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:11.183Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:11.184Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:11.185Z | INFO     | uvicorn.error:94 - Finished server process [795374]
+2025-07-27T09:49:11.561Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:14.475Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:14.577Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:14.579Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:14.579Z | INFO     | uvicorn.error:94 - Finished server process [795458]
+2025-07-27T09:49:14.973Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:18.486Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:18.588Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:18.590Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:18.591Z | INFO     | uvicorn.error:94 - Finished server process [795517]
+2025-07-27T09:49:19.058Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:21.971Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:22.073Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:22.075Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:22.076Z | INFO     | uvicorn.error:94 - Finished server process [795599]
+2025-07-27T09:49:26.083Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:38.027Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:38.129Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:38.130Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:38.131Z | INFO     | uvicorn.error:94 - Finished server process [795727]
+2025-07-27T09:49:38.514Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:41.225Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:41.326Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:41.328Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:41.329Z | INFO     | uvicorn.error:94 - Finished server process [795932]
+2025-07-27T09:49:41.730Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:49:52.258Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:49:52.360Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:49:52.362Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:49:52.364Z | INFO     | uvicorn.error:94 - Finished server process [796002]
+2025-07-27T09:49:52.759Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:50:19.410Z | INFO     | social_media_fapi.routers.post:21 - Finding post with id 1
+2025-07-27T09:50:19.412Z | DEBUG    | social_media_fapi.routers.post:24 - SELECT posts.id, posts.body 
+FROM posts 
+WHERE posts.id = :id_1
+2025-07-27T09:50:19.415Z | INFO     | uvicorn.access:476 - 127.0.0.1:59650 - "GET /post/1 HTTP/1.1" 200
+2025-07-27T09:52:03.301Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:52:03.403Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:52:03.404Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:52:03.405Z | INFO     | uvicorn.error:94 - Finished server process [796191]
+2025-07-27T09:52:03.792Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:12.286Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:12.388Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:12.389Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:12.391Z | INFO     | uvicorn.error:94 - Finished server process [798178]
+2025-07-27T09:55:12.780Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:15.189Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:15.290Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:15.291Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:15.292Z | INFO     | uvicorn.error:94 - Finished server process [800780]
+2025-07-27T09:55:20.431Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:24.347Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:24.449Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:24.450Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:24.451Z | INFO     | uvicorn.error:94 - Finished server process [800937]
+2025-07-27T09:55:26.453Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:27.458Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:27.560Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:27.561Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:27.562Z | INFO     | uvicorn.error:94 - Finished server process [801050]
+2025-07-27T09:55:27.936Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:41.478Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:41.579Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:41.580Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:41.581Z | INFO     | uvicorn.error:94 - Finished server process [801079]
+2025-07-27T09:55:42.000Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:55:45.312Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:55:45.414Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:55:45.416Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:55:45.418Z | INFO     | uvicorn.error:94 - Finished server process [801339]
+2025-07-27T09:55:45.832Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:00.979Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:01.080Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:01.082Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:01.084Z | INFO     | uvicorn.error:94 - Finished server process [801419]
+2025-07-27T09:56:01.521Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:03.129Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:03.230Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:03.232Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:03.232Z | INFO     | uvicorn.error:94 - Finished server process [801680]
+2025-07-27T09:56:03.624Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:26.393Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:26.494Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:26.495Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:26.496Z | INFO     | uvicorn.error:94 - Finished server process [801733]
+2025-07-27T09:56:26.875Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:39.715Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:39.816Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:39.818Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:39.820Z | INFO     | uvicorn.error:94 - Finished server process [802051]
+2025-07-27T09:56:40.224Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:44.338Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:44.439Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:44.441Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:44.442Z | INFO     | uvicorn.error:94 - Finished server process [802291]
+2025-07-27T09:56:44.826Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:51.644Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:51.746Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:51.748Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:51.749Z | INFO     | uvicorn.error:94 - Finished server process [802380]
+2025-07-27T09:56:52.139Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:56:53.546Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:56:53.647Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:56:53.649Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:56:53.650Z | INFO     | uvicorn.error:94 - Finished server process [802528]
+2025-07-27T09:56:54.051Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:00.870Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:00.972Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:00.974Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:00.975Z | INFO     | uvicorn.error:94 - Finished server process [802562]
+2025-07-27T09:57:01.383Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:02.589Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:02.691Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:02.692Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:02.693Z | INFO     | uvicorn.error:94 - Finished server process [802708]
+2025-07-27T09:57:03.101Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:05.615Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:05.717Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:05.719Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:05.720Z | INFO     | uvicorn.error:94 - Finished server process [802799]
+2025-07-27T09:57:06.146Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:08.858Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:08.960Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:08.961Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:08.962Z | INFO     | uvicorn.error:94 - Finished server process [802856]
+2025-07-27T09:57:09.355Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:11.864Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:11.966Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:11.967Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:11.968Z | INFO     | uvicorn.error:94 - Finished server process [802924]
+2025-07-27T09:57:12.381Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:14.591Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:14.693Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:14.694Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:14.695Z | INFO     | uvicorn.error:94 - Finished server process [802984]
+2025-07-27T09:57:15.076Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:19.491Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:19.593Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:19.594Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:19.595Z | INFO     | uvicorn.error:94 - Finished server process [803031]
+2025-07-27T09:57:20.016Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:21.023Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:21.124Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:21.127Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:21.128Z | INFO     | uvicorn.error:94 - Finished server process [803120]
+2025-07-27T09:57:21.535Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:57:24.548Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:57:24.649Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:57:24.651Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:57:24.652Z | INFO     | uvicorn.error:94 - Finished server process [803141]
+2025-07-27T09:57:25.072Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:26.140Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:26.243Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:26.245Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:26.246Z | INFO     | uvicorn.error:94 - Finished server process [803214]
+2025-07-27T09:58:26.652Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:28.661Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:28.763Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:28.765Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:28.765Z | INFO     | uvicorn.error:94 - Finished server process [804067]
+2025-07-27T09:58:29.206Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:32.618Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:32.720Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:32.721Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:32.722Z | INFO     | uvicorn.error:94 - Finished server process [804127]
+2025-07-27T09:58:33.142Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:40.967Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:41.068Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:41.070Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:41.071Z | INFO     | uvicorn.error:94 - Finished server process [804188]
+2025-07-27T09:58:41.497Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:42.202Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:42.304Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:42.305Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:42.306Z | INFO     | uvicorn.error:94 - Finished server process [804338]
+2025-07-27T09:58:45.970Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:58:57.409Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:58:57.510Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:58:57.512Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:58:57.512Z | INFO     | uvicorn.error:94 - Finished server process [804434]
+2025-07-27T09:58:57.965Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:59:01.177Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:59:01.279Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:59:01.281Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:59:01.282Z | INFO     | uvicorn.error:94 - Finished server process [804700]
+2025-07-27T09:59:01.728Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:59:02.433Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:59:02.535Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:59:02.536Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:59:02.537Z | INFO     | uvicorn.error:94 - Finished server process [804769]
+2025-07-27T09:59:02.929Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:59:05.338Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:59:05.441Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:59:05.442Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:59:05.443Z | INFO     | uvicorn.error:94 - Finished server process [804794]
+2025-07-27T09:59:05.849Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T09:59:10.969Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T09:59:11.070Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T09:59:11.071Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T09:59:11.072Z | INFO     | uvicorn.error:94 - Finished server process [804860]
+2025-07-27T09:59:11.456Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:20.319Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:20.421Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:20.422Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:20.423Z | INFO     | uvicorn.error:94 - Finished server process [804964]
+2025-07-27T10:02:20.851Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:22.058Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:22.159Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:22.160Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:22.161Z | INFO     | uvicorn.error:94 - Finished server process [807696]
+2025-07-27T10:02:24.593Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:26.907Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:27.009Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:27.010Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:27.010Z | INFO     | uvicorn.error:94 - Finished server process [807781]
+2025-07-27T10:02:27.398Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:33.818Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:33.920Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:33.922Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:33.923Z | INFO     | uvicorn.error:94 - Finished server process [807829]
+2025-07-27T10:02:34.343Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:38.659Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:38.760Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:38.762Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:38.762Z | INFO     | uvicorn.error:94 - Finished server process [807972]
+2025-07-27T10:02:39.172Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:40.076Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:40.177Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:40.179Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:40.179Z | INFO     | uvicorn.error:94 - Finished server process [808061]
+2025-07-27T10:02:40.620Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:41.827Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:41.929Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:41.931Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:41.931Z | INFO     | uvicorn.error:94 - Finished server process [808091]
+2025-07-27T10:02:42.356Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:43.161Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:43.262Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:43.263Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:43.264Z | INFO     | uvicorn.error:94 - Finished server process [808124]
+2025-07-27T10:02:43.639Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:46.650Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:46.752Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:46.755Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:46.756Z | INFO     | uvicorn.error:94 - Finished server process [808158]
+2025-07-27T10:02:47.151Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:02:48.858Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:02:48.960Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:02:48.961Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:02:48.961Z | INFO     | uvicorn.error:94 - Finished server process [808220]
+2025-07-27T10:02:49.358Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:03:23.551Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:03:23.653Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:03:23.654Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:03:23.655Z | INFO     | uvicorn.error:94 - Finished server process [808261]
+2025-07-27T10:03:24.099Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:03:26.208Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:03:26.310Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:03:26.311Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:03:26.312Z | INFO     | uvicorn.error:94 - Finished server process [808822]
+2025-07-27T10:03:26.728Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:03:29.639Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:03:29.741Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:03:29.745Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:03:29.748Z | INFO     | uvicorn.error:94 - Finished server process [808884]
+2025-07-27T10:03:30.144Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T10:03:35.862Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T10:03:35.964Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T10:03:35.966Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T10:03:35.967Z | INFO     | uvicorn.error:94 - Finished server process [808948]
+2025-07-27T10:03:36.383Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:24:36.309Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:24:36.495Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:24:36.513Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:24:36.516Z | INFO     | uvicorn.error:94 - Finished server process [809068]
+2025-07-27T11:24:37.224Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:24:38.330Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:24:38.432Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:24:38.433Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:24:38.434Z | INFO     | uvicorn.error:94 - Finished server process [844078]
+2025-07-27T11:27:58.314Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:49:37.046Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:49:37.232Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:49:37.257Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:49:37.262Z | INFO     | uvicorn.error:94 - Finished server process [847814]
+2025-07-27T11:49:37.993Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:49:41.808Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:49:41.911Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:49:41.914Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:49:41.917Z | INFO     | uvicorn.error:94 - Finished server process [866694]
+2025-07-27T11:49:42.619Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:49:44.329Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:49:44.432Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:49:44.434Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:49:44.435Z | INFO     | uvicorn.error:94 - Finished server process [866790]
+2025-07-27T11:49:48.021Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:49:49.731Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:49:49.838Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:49:49.842Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:49:49.845Z | INFO     | uvicorn.error:94 - Finished server process [866929]
+2025-07-27T11:49:50.560Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:49:52.271Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:49:52.380Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:49:52.382Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:49:52.383Z | INFO     | uvicorn.error:94 - Finished server process [866991]
+2025-07-27T11:49:52.983Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:11.636Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:11.738Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:11.740Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:11.742Z | INFO     | uvicorn.error:94 - Finished server process [867036]
+2025-07-27T11:50:12.382Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:12.889Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:12.993Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:12.996Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:12.997Z | INFO     | uvicorn.error:94 - Finished server process [867430]
+2025-07-27T11:50:13.621Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:16.935Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:17.038Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:17.040Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:17.041Z | INFO     | uvicorn.error:94 - Finished server process [867460]
+2025-07-27T11:50:17.677Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:31.927Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:32.030Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:32.032Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:32.033Z | INFO     | uvicorn.error:94 - Finished server process [867522]
+2025-07-27T11:50:32.699Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:34.508Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:34.612Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:34.614Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:34.615Z | INFO     | uvicorn.error:94 - Finished server process [867807]
+2025-07-27T11:50:35.223Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:50:56.789Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:50:56.892Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:50:56.896Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:50:56.902Z | INFO     | uvicorn.error:94 - Finished server process [867862]
+2025-07-27T11:51:23.287Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:56:48.370Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:56:48.475Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:56:48.477Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:56:48.478Z | INFO     | uvicorn.error:94 - Finished server process [868708]
+2025-07-27T11:56:49.242Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:04.793Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:04.897Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:04.901Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:04.904Z | INFO     | uvicorn.error:94 - Finished server process [873456]
+2025-07-27T11:57:05.505Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:11.328Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:11.430Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:11.437Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:11.439Z | INFO     | uvicorn.error:94 - Finished server process [873754]
+2025-07-27T11:57:12.064Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:13.571Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:13.674Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:13.677Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:13.678Z | INFO     | uvicorn.error:94 - Finished server process [873913]
+2025-07-27T11:57:14.315Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:26.353Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:26.456Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:26.459Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:26.462Z | INFO     | uvicorn.error:94 - Finished server process [873957]
+2025-07-27T11:57:27.055Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:29.264Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:29.367Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:29.369Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:29.370Z | INFO     | uvicorn.error:94 - Finished server process [874166]
+2025-07-27T11:57:29.988Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:35.109Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:35.211Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:35.213Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:35.215Z | INFO     | uvicorn.error:94 - Finished server process [874230]
+2025-07-27T11:57:35.825Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:42.148Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:42.251Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:42.253Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:42.254Z | INFO     | uvicorn.error:94 - Finished server process [874331]
+2025-07-27T11:57:42.904Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:44.512Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:44.614Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:44.617Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:44.619Z | INFO     | uvicorn.error:94 - Finished server process [874500]
+2025-07-27T11:57:45.385Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:47.394Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:47.497Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:47.500Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:47.501Z | INFO     | uvicorn.error:94 - Finished server process [874552]
+2025-07-27T11:57:48.096Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:51.209Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:51.312Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:51.314Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:51.315Z | INFO     | uvicorn.error:94 - Finished server process [874600]
+2025-07-27T11:57:51.925Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:57:56.742Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:57:56.846Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:57:56.848Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:57:56.849Z | INFO     | uvicorn.error:94 - Finished server process [874672]
+2025-07-27T11:57:57.490Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:58:05.617Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:58:05.720Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:58:05.723Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:58:05.725Z | INFO     | uvicorn.error:94 - Finished server process [874768]
+2025-07-27T11:58:06.335Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:58:09.048Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:58:09.150Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:58:09.152Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:58:09.153Z | INFO     | uvicorn.error:94 - Finished server process [874926]
+2025-07-27T11:58:09.735Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T11:58:11.946Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T11:58:12.048Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T11:58:12.050Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T11:58:12.052Z | INFO     | uvicorn.error:94 - Finished server process [874989]
+2025-07-27T11:58:12.778Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:00:52.727Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:00:52.830Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:00:52.833Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:00:52.837Z | INFO     | uvicorn.error:94 - Finished server process [875049]
+2025-07-27T12:00:53.398Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:02:03.813Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:02:03.916Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:02:03.919Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:02:03.921Z | INFO     | uvicorn.error:94 - Finished server process [877598]
+2025-07-27T12:02:04.621Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:02:05.628Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:02:05.731Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:02:05.733Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:02:05.734Z | INFO     | uvicorn.error:94 - Finished server process [878581]
+2025-07-27T12:02:49.713Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:03:06.863Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:03:06.966Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:03:06.968Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:03:06.969Z | INFO     | uvicorn.error:94 - Finished server process [879583]
+2025-07-27T12:03:07.605Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:03:08.211Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:03:08.315Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:03:08.318Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:03:08.321Z | INFO     | uvicorn.error:94 - Finished server process [879907]
+2025-07-27T12:03:08.924Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:03:11.134Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:03:11.236Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:03:11.238Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:03:11.239Z | INFO     | uvicorn.error:94 - Finished server process [879933]
+2025-07-27T12:03:36.197Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:04:20.620Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:04:20.724Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:04:20.727Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:04:20.729Z | INFO     | uvicorn.error:94 - Finished server process [880504]
+2025-07-27T12:04:21.315Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:04:26.533Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:04:26.637Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:04:26.642Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:04:26.644Z | INFO     | uvicorn.error:94 - Finished server process [881220]
+2025-07-27T12:09:42.554Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:09:46.269Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:09:46.371Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:09:46.374Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:09:46.376Z | INFO     | uvicorn.error:94 - Finished server process [886456]
+2025-07-27T12:11:03.226Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:11:49.170Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:11:49.274Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:11:49.275Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:11:49.277Z | INFO     | uvicorn.error:94 - Finished server process [887906]
+2025-07-27T12:11:49.847Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:19:36.524Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:19:36.628Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:19:36.630Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:19:36.632Z | INFO     | uvicorn.error:94 - Finished server process [888620]
+2025-07-27T12:19:37.217Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:19:38.023Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:19:38.127Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:19:38.131Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:19:38.133Z | INFO     | uvicorn.error:94 - Finished server process [895574]
+2025-07-27T12:22:07.534Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:22:08.240Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:22:08.343Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:22:08.344Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:22:08.345Z | INFO     | uvicorn.error:94 - Finished server process [898187]
+2025-07-27T12:22:08.920Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:22:15.043Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:22:15.146Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:22:15.149Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:22:15.152Z | INFO     | uvicorn.error:94 - Finished server process [898234]
+2025-07-27T12:22:15.764Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:22:16.269Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:22:16.373Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:22:16.375Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:22:16.376Z | INFO     | uvicorn.error:94 - Finished server process [898353]
+2025-07-27T12:22:16.964Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:22:20.079Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:22:20.182Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:22:20.185Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:22:20.188Z | INFO     | uvicorn.error:94 - Finished server process [898381]
+2025-07-27T12:22:20.787Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:22:21.794Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:22:21.898Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:22:21.901Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:22:21.903Z | INFO     | uvicorn.error:94 - Finished server process [898458]
+2025-07-27T12:22:22.491Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:26:11.346Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:26:11.451Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:26:11.454Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:26:11.456Z | INFO     | uvicorn.error:94 - Finished server process [898488]
+2025-07-27T12:26:12.080Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:26:12.885Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:26:12.987Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:26:12.989Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:26:12.991Z | INFO     | uvicorn.error:94 - Finished server process [906478]
+2025-07-27T12:26:13.605Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:26:17.821Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:26:17.924Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:26:17.925Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:26:17.927Z | INFO     | uvicorn.error:94 - Finished server process [906521]
+2025-07-27T12:26:18.586Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:26:30.127Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:26:30.230Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:26:30.233Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:26:30.236Z | INFO     | uvicorn.error:94 - Finished server process [906660]
+2025-07-27T12:26:30.843Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:26:32.451Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:26:32.554Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:26:32.557Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:26:32.559Z | INFO     | uvicorn.error:94 - Finished server process [907000]
+2025-07-27T12:26:33.152Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:32:00.852Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:32:00.955Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:32:00.958Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:32:00.960Z | INFO     | uvicorn.error:94 - Finished server process [907064]
+2025-07-27T12:32:01.556Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:32:02.662Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:32:02.767Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:32:02.770Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:32:02.772Z | INFO     | uvicorn.error:94 - Finished server process [911685]
+2025-07-27T12:32:03.380Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-07-27T12:32:12.315Z | INFO     | uvicorn.error:264 - Shutting down
+2025-07-27T12:32:12.419Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:32:12.422Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:32:12.424Z | INFO     | uvicorn.error:94 - Finished server process [911728]
+2025-07-27T12:34:08.197Z | INFO     | [-] uvicorn.error:62 - Application startup complete.
+2025-07-27T12:34:16.424Z | INFO     | [-] uvicorn.error:264 - Shutting down
+2025-07-27T12:34:16.526Z | INFO     | [-] uvicorn.error:67 - Waiting for application shutdown.
+2025-07-27T12:34:16.528Z | INFO     | [-] uvicorn.error:76 - Application shutdown complete.
+2025-07-27T12:34:16.530Z | INFO     | [-] uvicorn.error:94 - Finished server process [913829]
+2025-07-27T12:34:17.132Z | INFO     | [-] uvicorn.error:62 - Application startup complete.
+2025-07-27T12:35:08.920Z | INFO     | [462b47cf] social_media_fapi.routers.post:76 - Getting post with comments
+2025-07-27T12:35:08.922Z | INFO     | [462b47cf] social_media_fapi.routers.post:21 - Finding post with id 1
+2025-07-27T12:35:08.923Z | DEBUG    | [462b47cf] social_media_fapi.routers.post:24 - SELECT posts.id, posts.body 
+FROM posts 
+WHERE posts.id = :id_1
+2025-07-27T12:35:08.928Z | INFO     | [462b47cf] social_media_fapi.routers.post:68 - getting comments on post
+2025-07-27T12:35:08.930Z | DEBUG    | [462b47cf] social_media_fapi.routers.post:70 - SELECT comments.id, comments.body, comments.post_id 
+FROM comments 
+WHERE comments.post_id = :post_id_1
+2025-07-27T12:35:08.935Z | INFO     | [462b47cf] uvicorn.access:476 - 127.0.0.1:49422 - "GET /post/1 HTTP/1.1" 200
