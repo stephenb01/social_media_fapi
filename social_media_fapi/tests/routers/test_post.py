@@ -67,7 +67,11 @@ async def test_create_comment(async_client: AsyncClient, created_post: dict):
         "/comment", json={"body": body, "post_id": created_post["id"]}
     )
     assert response.status_code == 201
-    assert {"id": 1, "body": body, "post_id": created_post["id"]}.items() <= response.json().items()
+    assert {
+        "id": 1,
+        "body": body,
+        "post_id": created_post["id"],
+    }.items() <= response.json().items()
 
 
 @pytest.mark.anyio
@@ -98,6 +102,7 @@ async def test_get_post_with_comments(
     assert response.status_code == 200
     assert response.json() == {"post": created_post, "comments": [created_comment]}
 
+
 @pytest.mark.anyio
 async def test_get_missing_post_with_comments(
     async_client: AsyncClient, created_post: dict, created_comment: dict
@@ -105,4 +110,3 @@ async def test_get_missing_post_with_comments(
     response = await async_client.get("/post/2")
 
     assert response.status_code == 404
-
