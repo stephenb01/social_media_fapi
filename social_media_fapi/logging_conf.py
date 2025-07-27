@@ -24,10 +24,12 @@ def configure_logging() -> None:
                     "format": "(%(correlation_id)s) %(name)s:%(lineno)d - %(message)s"
                 },
                 "file": {
-                    "class": "logging.Formatter",
+                    "class": "pythonjsonlogger.jsonlogger.JsonFormatter",
                     "datefmt": "%Y-%m-%dT%H:%M:%S",
                     # "%(asctime)s.%(msec)03dZ  - Is the ISO standard for the date/time.
-                    "format": "%(asctime)s.%(msecs)03dZ | %(levelname)-8s | [%(correlation_id)s] %(name)s:%(lineno)d - %(message)s"  # The -8s means pad with up to 8 characters so it is always 8 characters long.         
+                    # "format": "%(asctime)s.%(msecs)03dZ | %(levelname)-8s | [%(correlation_id)s] %(name)s:%(lineno)d - %(message)s"  # The -8s means pad with up to 8 characters so it is always 8 characters long.         
+                    # For the json output all we need are the fields in the format.
+                    "format": "%(asctime)s %(msecs)03d %(levelname)-8s %(correlation_id)s %(name)s:%(lineno)d %(message)s"        
                 }
             },
             "handlers": {
