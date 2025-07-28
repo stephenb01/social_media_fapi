@@ -4,7 +4,7 @@ from fastapi import APIRouter, HTTPException, status
 
 from social_media_fapi.database import database, user_table
 from social_media_fapi.models.user import UserIn
-from social_media_fapi.security import get_user
+from social_media_fapi.security import get_password_hash, get_user
 
 router = APIRouter()
 
@@ -19,7 +19,8 @@ async def register(user: UserIn):
             detail="A user with that email already exists",
         )
 
-    query = user_table.insert().values(email=user.email, password=user.password)
+    hashed_password = get_password_hash(user.password)
+    query = user_table.insert().values(email=user.email, password=hashed_password)
 
     logger.debug(query)
 
