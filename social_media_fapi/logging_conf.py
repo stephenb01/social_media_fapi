@@ -1,7 +1,22 @@
+import logging
 from logging.config import dictConfig
 
 from social_media_fapi.config import DevConfig, config
 
+def obfuscated(email: str, obfuscated_length: int) -> str:
+    characters = email[:obfuscated_length]
+    first, last = email.split("@")
+    return characters + ("*" * (len(first) - obfuscated_length)) + '@' + last
+    
+class EmailObfuscationFilter(logging.Filter):
+    def __init__(self, name: str = "", obfuscated_length: int = 2) -> None:
+        super().__init__(name)
+        self.obfuscated_length = obfuscated_length
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        if "email" in record.__dict__:
+            record.email = obfuscated(record.email, self.obfuscated_length)
+        return True # True means the log will be saved, False means the log will be rejeted.
 
 def configure_logging() -> None:
     dictConfig(
@@ -15,6 +30,10 @@ def configure_logging() -> None:
                     "default_value": "-"
                     # So the () above acts like the folloiwng:
                     # filter = asgi_correlation_id.CorrelationIdFilter(uuid_length=8, default_value="-")
+                },
+                "email_obfuscation": {
+                    "()": EmailObfuscationFilter,
+                    "obfuscated_length": 2 if isinstance(config, DevConfig) else 0
                 }
             },
             "formatters": {
@@ -37,7 +56,7 @@ def configure_logging() -> None:
                     "class": "rich.logging.RichHandler",
                     "level": "DEBUG",
                     "formatter": "console",
-                    "filters": ["correlation_id"]
+                    "filters": ["correlation_id", "email_obfuscation"]
                 },
                 "rotating_file": {
                     "class": "logging.handlers.RotatingFileHandler",
@@ -48,6 +67,14 @@ def configure_logging() -> None:
                     "backupCount": 2, # It will delete the old files when the number of files get to this count.
                     "encoding": "utf8",
                     "filters": ["correlation_id"]
+                },
+                "logtail": {
+                    "class": "logtail.LogtailHandler",
+                    "level": "DEBUG",
+                    "formatter": "console",
+                    "filters": ["correlation_id", "email_obfuscation"],
+                    "source_token": config.LOGTAIL_API_KEY,
+                    "host": config.LOGTAIL_HOST
                 }
             },
             "loggers": {
@@ -56,7 +83,7 @@ def configure_logging() -> None:
                     "level": "INFO"
                 },
                 "social_media_fapi" : {
-                    "handlers": ["default", "rotating_file"],
+                    "handlers": ["default", "rotating_file", "logtail"],
                     "level": "DEBUG" if isinstance(config, DevConfig) else "INFO",
                     "propagate": False # Don't send any loggers up to the root logger # root.social_media_fapi.routers.post
                 },
