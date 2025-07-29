@@ -15,6 +15,8 @@ class GlobalConfig(BaseConfig):
     DB_FORCE_ROLL_BACK: bool = False
     LOGTAIL_API_KEY: Optional[str] = None
     LOGTAIL_HOST: Optional[str] = None
+    SECRET_KEY: Optional[str] = None
+    ALGORITHM: Optional[str] = None
 
 
 class DevConfig(GlobalConfig):
@@ -31,7 +33,7 @@ class TestConfig(GlobalConfig):
     model_config = SettingsConfigDict(env_prefix="TEST_")
 
 
-@lru_cache() # Caches this function, so if called again it will return what it did last time.
+@lru_cache()  # Caches this function, so if called again it will return what it did last time.
 def get_config(env_state: str):
     configs = {"dev": DevConfig, "prod": ProdConfig, "test": TestConfig}
     # Below get config depending on the env_state and the () will create an object of that found class.
