@@ -2,7 +2,8 @@ import datetime
 import logging
 
 from fastapi import HTTPException, status
-from jose import jwt
+from fastapi.security import OAuth2PasswordBearer
+from jose import ExpiredSignatureError, jwt
 from passlib.context import CryptContext
 
 from social_media_fapi.config import config
@@ -10,11 +11,14 @@ from social_media_fapi.database import database, user_table
 
 logger = logging.getLogger(__name__)
 
-
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+# This is used to extract the token from the request header.
 pwd_context = CryptContext(schemes=["bcrypt"])
 
 credentials_exception = HTTPException(
-    status_code=status.HTTP_401_UNAUTHORIZED, detail="Could not validate credentials"
+    status_code=status.HTTP_401_UNAUTHORIZED,
+    detail="Could not validate credentials",
+    headers={"WWW-Authenticate": "Bearer"},
 )
 
 
@@ -23,8 +27,10 @@ def access_token_expire_minutes() -> int:
 
 
 def create_access_token(email: str):
+    expire = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(
+        minutes=access_token_expire_minutes()
+    )
 
-    expire = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=30)
     # Now creating the payload of the jwt.
     # sub - The subject for the jwt or who the access token is for.
     # exp - the expiry time.
@@ -57,5 +63,26 @@ async def authenticate_user(email: str, password: str):
     if not user:
         raise credentials_exception
     if not verify_password(password, user.password):
+        raise credentials_exception
+    return user
+
+
+async def get_current_user(token: str):
+    try:
+        payload = jwt.decode(token, config.SECRET_KEY, algorithms=[config.ALGORITHM])
+        email: str = payload.get("sub")
+        if email is None:
+            raise credentials_exception
+    except ExpiredSignatureError as e:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token has expired",
+            headers={"WWW-Authenticate": "Bearer"},
+        ) from e
+    except jwt.JWTError as e:
+        raise credentials_exception from e
+
+    user = await get_user(email)
+    if user is None:
         raise credentials_exception
     return user

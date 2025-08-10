@@ -1,6 +1,7 @@
 import logging
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
+from fastapi.security import OAuth2PasswordBearer
 
 from social_media_fapi.database import comment_table, database, post_table
 from social_media_fapi.models.post import (
@@ -11,6 +12,8 @@ from social_media_fapi.models.post import (
     UserPostWithComments,
 )
 
+from social_media_fapi.models.user import User
+from social_media_fapi.security import get_current_user, oauth2_scheme
 router = APIRouter()
 
 logger = logging.getLogger(__name__)
@@ -26,8 +29,9 @@ async def find_post(post_id: int):
 
 
 @router.post("/post", response_model=UserPost, status_code=201)
-async def create_post(post: UserPostIn) -> UserPost:
+async def create_post(post: UserPostIn, request: Request) -> UserPost:
     logger.info("Creating post")
+    current_user: User = await get_current_user(await oauth2_scheme(request)) # noqa
     data = post.model_dump()  # Turn the Pydantic model into a dictionary
     # In the .values() the parameter can be a dictionary, and the keys need to match the columns of the DB table.
     query = post_table.insert().values(data)
@@ -46,8 +50,9 @@ async def get_all_posts() -> list[UserPost]:
 
 
 @router.post("/comment", response_model=Comment, status_code=201)
-async def create_post(comment: CommentIn) -> UserPost:
+async def create_comment(comment: CommentIn, request: Request) -> UserPost:
     logger.info("Creating comment")
+    current_user: User = await get_current_user(await oauth2_scheme(request)) # noqa
     # Need to add the await here as find post is an async function
     post = await find_post(comment.post_id)
     if not post:

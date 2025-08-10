@@ -5,16 +5,13 @@ import pytest
 from fastapi.testclient import TestClient
 from httpx import ASGITransport, AsyncClient
 
-
-
-
 # This is used to overwrite the main envrionment settings by setting the envrionment to use test database.
 os.environ["ENV_STATE"] = "test"
 
-from social_media_fapi.database import database, user_table # noqa: E402 
+from social_media_fapi.database import database, user_table  # noqa: E402
 
 # the # noqa: E402  tells the ruff linter to ignore the rule to put this import to the top of hte file.
-from social_media_fapi.main import app # noqa: E402 
+from social_media_fapi.main import app  # noqa: E402
 
 
 # This will be run once for all our test session
@@ -50,11 +47,22 @@ async def async_client() -> AsyncGenerator:
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
         yield ac
 
+
 @pytest.fixture()
 async def registered_user(async_client: AsyncClient) -> dict:
     user_details = {"email": "test@example.com", "password": "1234"}
     await async_client.post("/register", json=user_details)
-    query = user_table.select(). where(user_table.c.email == user_details["email"])
+    query = user_table.select().where(user_table.c.email == user_details["email"])
     user = await database.fetch_one(query)
     user_details["id"] = user.id
     return user_details
+
+
+@pytest.fixture()
+async def logged_in_token(async_client: AsyncClient, registered_user: dict) -> str:
+    response = await async_client.post(
+        "/token",
+        json=registered_user
+    )
+    assert response.status_code == 200
+    return response.json().get("access_token")
