@@ -34,7 +34,8 @@ async def create_post(
 ) -> UserPost:
     logger.info("Creating post")
 
-    data = post.model_dump()  # Turn the Pydantic model into a dictionary
+    # This post.model_dump() Turns the Pydantic model into a dictionary
+    data = {**post.model_dump(), "user_id": current_user.id}
     # In the .values() the parameter can be a dictionary, and the keys need to match the columns of the DB table.
     query = post_table.insert().values(data)
 
@@ -65,7 +66,8 @@ async def create_comment(
         # logger.error(f"Post with id {comment.post_id} not found")
         raise HTTPException(status_code=404, detail="Post not found")
 
-    data = comment.model_dump()  # Turn the Pydantic model into a dictionary
+    # comment.model_dump() - Turn the Pydantic model into a dictionary
+    data = {**comment.model_dump(), "user_id": current_user.id}
     query = comment_table.insert().values(data)
     logger.debug(query)
     last_record_id = await database.execute(query)
