@@ -1,7 +1,7 @@
 import logging
+from typing import Annotated
 
-from fastapi import APIRouter, HTTPException, Request
-from fastapi.security import OAuth2PasswordBearer
+from fastapi import APIRouter, Depends, HTTPException
 
 from social_media_fapi.database import comment_table, database, post_table
 from social_media_fapi.models.post import (
@@ -11,9 +11,9 @@ from social_media_fapi.models.post import (
     UserPostIn,
     UserPostWithComments,
 )
-
 from social_media_fapi.models.user import User
-from social_media_fapi.security import get_current_user, oauth2_scheme
+from social_media_fapi.security import get_current_user
+
 router = APIRouter()
 
 logger = logging.getLogger(__name__)
@@ -29,9 +29,11 @@ async def find_post(post_id: int):
 
 
 @router.post("/post", response_model=UserPost, status_code=201)
-async def create_post(post: UserPostIn, request: Request) -> UserPost:
+async def create_post(
+    post: UserPostIn, current_user: Annotated[User, Depends(get_current_user)]
+) -> UserPost:
     logger.info("Creating post")
-    current_user: User = await get_current_user(await oauth2_scheme(request)) # noqa
+
     data = post.model_dump()  # Turn the Pydantic model into a dictionary
     # In the .values() the parameter can be a dictionary, and the keys need to match the columns of the DB table.
     query = post_table.insert().values(data)
@@ -50,9 +52,11 @@ async def get_all_posts() -> list[UserPost]:
 
 
 @router.post("/comment", response_model=Comment, status_code=201)
-async def create_comment(comment: CommentIn, request: Request) -> UserPost:
+async def create_comment(
+    comment: CommentIn, current_user: Annotated[User, Depends(get_current_user)]
+) -> UserPost:
     logger.info("Creating comment")
-    current_user: User = await get_current_user(await oauth2_scheme(request)) # noqa
+
     # Need to add the await here as find post is an async function
     post = await find_post(comment.post_id)
     if not post:
@@ -83,7 +87,7 @@ async def get_post_with_comments(post_id: int):
     if not post:
         # Because we have added an exception handler in the main.py (see @app.exception_handler(HTTPException))
         # We no longer need to log the error message here.
-        #logger.error(f"Post with post id {post_id} not found")
+        # logger.error(f"Post with post id {post_id} not found")
         raise HTTPException(status_code=404, detail="Post not found")
 
     return {"post": post, "comments": await get_comments_on_post(post_id)}

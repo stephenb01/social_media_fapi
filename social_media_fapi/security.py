@@ -1,7 +1,8 @@
 import datetime
 import logging
+from typing import Annotated
 
-from fastapi import HTTPException, status
+from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import ExpiredSignatureError, jwt
 from passlib.context import CryptContext
@@ -66,8 +67,9 @@ async def authenticate_user(email: str, password: str):
         raise credentials_exception
     return user
 
-
-async def get_current_user(token: str):
+# Changed teh parameter from token: str to token: Annotated[str, Depends(oauth2_scheme)]
+# This " Annotated[str, Depends(oauth2_scheme)]" means the value should be given to the paramter token is Depends(oauth2_scheme)
+async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     try:
         payload = jwt.decode(token, config.SECRET_KEY, algorithms=[config.ALGORITHM])
         email: str = payload.get("sub")
