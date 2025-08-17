@@ -10,6 +10,9 @@ class UserPost(UserPostIn):
     id: int
     user_id: int
 
+class UserPostWithLikes(UserPost):
+    model_config = ConfigDict(from_attributes=True)
+    likes: int
 
 class CommentIn(BaseModel):
     body: str
@@ -23,7 +26,7 @@ class Comment(CommentIn):
 
 
 class UserPostWithComments(BaseModel):
-    post: UserPost
+    post: UserPostWithLikes
     comments: list[Comment]
 
 
@@ -34,3 +37,11 @@ The class UserPostWithComments gives us the following data structure
  "comment": [{ "id": 2, "post_id": 0, "body": "My comment"}]
 }
 """
+
+class PostLikeIn(BaseModel):
+    post_id: int
+
+class PostLike(PostLikeIn):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    user_id: int
