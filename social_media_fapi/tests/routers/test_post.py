@@ -60,7 +60,7 @@ async def created_comment(
 # This is the tests.
 @pytest.mark.anyio
 async def test_create_post(
-    async_client: AsyncClient, registered_user: dict, logged_in_token: str
+    async_client: AsyncClient, confirmed_user: dict, logged_in_token: str
 ):
     body = "Test Post"
 
@@ -74,18 +74,18 @@ async def test_create_post(
     assert {
         "id": 1,
         "body": body,
-        "user_id": registered_user["id"],
+        "user_id": confirmed_user["id"],
     }.items() <= response.json().items()
 
 
 @pytest.mark.anyio
 async def test_create_post_expired_token(
-    async_client: AsyncClient, registered_user: dict, mocker
+    async_client: AsyncClient, confirmed_user: dict, mocker
 ):
     mocker.patch(
         "social_media_fapi.security.access_token_expire_minutes", return_value=-1
     )
-    token = security.create_access_token(registered_user["email"])
+    token = security.create_access_token(confirmed_user["email"])
     response = await async_client.post(
         "/post",
         json={"body": "Test Post"},
@@ -130,8 +130,10 @@ async def test_get_all_posts(async_client: AsyncClient, created_post: dict):
     response = await async_client.get("/post")
 
     assert response.status_code == 200
-    assert response.json() == [{**created_post, "likes":0}]
-    assert created_post.items() <= response.json()[0].items() # This is dictionary inclusion check. It is the same as the line above.
+    assert response.json() == [{**created_post, "likes": 0}]
+    assert (
+        created_post.items() <= response.json()[0].items()
+    )  # This is dictionary inclusion check. It is the same as the line above.
 
 
 @pytest.mark.anyio
@@ -169,18 +171,18 @@ async def test_get_all_posts_sort_likes(
     post_ids = [post["id"] for post in data]
     assert post_ids == expected_order
 
+
 @pytest.mark.anyio
-async def test_get_all_posts_wrong_sorting(
-    async_client: AsyncClient
-):
+async def test_get_all_posts_wrong_sorting(async_client: AsyncClient):
     response = await async_client.get("/post", params={"sorting": "wrong_sorting"})
     assert response.status_code == 422
+
 
 @pytest.mark.anyio
 async def test_create_comment(
     async_client: AsyncClient,
     created_post: dict,
-    registered_user: dict,
+    confirmed_user: dict,
     logged_in_token: str,
 ):
     body = "Test Comment"
@@ -195,7 +197,7 @@ async def test_create_comment(
         "id": 1,
         "body": body,
         "post_id": created_post["id"],
-        "user_id": registered_user["id"],
+        "user_id": confirmed_user["id"],
     }.items() <= response.json().items()
 
 

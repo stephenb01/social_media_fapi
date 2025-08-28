@@ -17,6 +17,8 @@ class GlobalConfig(BaseConfig):
     LOGTAIL_HOST: Optional[str] = None
     SECRET_KEY: Optional[str] = None
     ALGORITHM: Optional[str] = None
+    MAILGUN_API_KEY: Optional[str] = None
+    MAILGUN_DOMAIN: Optional[str] = None
 
 
 class DevConfig(GlobalConfig):

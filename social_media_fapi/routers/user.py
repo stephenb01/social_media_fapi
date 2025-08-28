@@ -1,7 +1,9 @@
 import logging
 
 # from  typing import Annotated
-from fastapi import APIRouter, HTTPException, Request, status
+from fastapi import APIRouter, BackgroundTasks, HTTPException, Request, status
+
+from social_media_fapi import tasks
 
 # from fastapi.security import OAuth2PasswordRequestForm
 from social_media_fapi.database import database, user_table
@@ -21,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 @router.post("/register", status_code=201)
-async def register(user: UserIn, request: Request):
+async def register(user: UserIn, background_tasks: BackgroundTasks, request: Request):
     if await get_user(user.email):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -34,6 +36,16 @@ async def register(user: UserIn, request: Request):
     logger.debug(query)
 
     await database.execute(query)
+    # Adding a background task here allows the email to be sent later because it can be really slow.
+    # The routine can then finish and move onto the next task.
+    # There are others, such as RQ worker and celery when you have a computational expensive process as they have a separate process/server.
+    background_tasks.add_task(
+        tasks.send_user_registration_email,
+        user.email,
+        confirmation_url=request.url_for(
+            "confirm_email", token=create_confirmation_token(user.email)
+        ),
+    )
     return {
         "detail": "User created. Please confirm your email",
         "confirmation_url": request.url_for(
