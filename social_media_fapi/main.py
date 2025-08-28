@@ -8,6 +8,7 @@ from asgi_correlation_id import CorrelationIdMiddleware
 from social_media_fapi.database import database
 from social_media_fapi.logging_conf import configure_logging
 from social_media_fapi.routers.post import router as post_router
+from social_media_fapi.routers.upload import router as upload_router
 from social_media_fapi.routers.user import router as user_router
 
 logger = logging.getLogger(__name__)
@@ -26,6 +27,7 @@ app.add_middleware(CorrelationIdMiddleware)
 
 
 app.include_router(post_router)
+app.include_router(upload_router)
 app.include_router(user_router)
 
 @app.exception_handler(HTTPException)

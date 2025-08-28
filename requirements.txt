@@ -11,3 +11,5 @@ logtail-python
 python-jose
 python-multipart
 passlib[bcrypt]
+aiofiles # To load files asycasynchronously
+b2sdk # Files will be sent to back place service.
