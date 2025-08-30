@@ -1,5 +1,7 @@
 import contextlib
+import os
 import pathlib
+import tempfile
 
 import pytest
 from httpx import AsyncClient
@@ -20,7 +22,8 @@ def sample_image(
 @pytest.fixture(autouse=True)
 def mock_b2_upload_file(mocker):
     return mocker.patch(
-        "social_media_fapi.routers.upload.b2_upload_file", return_value="https://fakeurl.com"
+        "social_media_fapi.routers.upload.b2_upload_file",
+        return_value="https://fakeurl.com",
     )
 
 
@@ -49,8 +52,25 @@ async def call_upload_endpoint(
         headers={"Authorization": f"Bearer {token}"},
     )
 
+
 @pytest.mark.anyio
-async def test_upload_image( async_client: AsyncClient, logged_in_token: str, sample_image: pathlib.Path ):
+async def test_upload_image(
+    async_client: AsyncClient, logged_in_token: str, sample_image: pathlib.Path
+):
     response = await call_upload_endpoint(async_client, logged_in_token, sample_image)
     assert response.status_code == 201
     assert response.json()["file_url"] == "https://fakeurl.com"
+
+
+@pytest.mark.anyio
+async def test_temp_file_removed_after_upload(
+    async_client: AsyncClient, logged_in_token: str, sample_image: pathlib.Path, mocker
+):
+    named_temp_file_spy = mocker.spy(tempfile, "NamedTemporaryFile")
+
+    response = await call_upload_endpoint(async_client, logged_in_token, sample_image)
+    assert response.status_code == 201
+
+    created_temp_file = named_temp_file_spy.spy_return
+
+    assert not os.path.exists(created_temp_file.name)
