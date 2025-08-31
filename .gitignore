@@ -8,3 +8,4 @@ __pycache__
 *.png
 .env
 *.log
+.pytest_cache
