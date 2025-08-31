@@ -2,7 +2,6 @@ ruff
 black
 isort
 pytest
-httpx
 anyio
 pytest-mock
 pyfakefs

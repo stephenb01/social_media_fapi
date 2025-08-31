@@ -5,6 +5,7 @@ databases[aiosqlite]
 python-dotenv
 pydantic-settings
 rich
+httpx
 asgi-correlation-id
 python-json-logger
 logtail-python
