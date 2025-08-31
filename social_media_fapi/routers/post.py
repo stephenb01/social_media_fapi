@@ -1,8 +1,9 @@
 import logging
-from typing import Annotated
-import sqlalchemy
 from enum import Enum
-from fastapi import APIRouter, Depends, HTTPException
+from typing import Annotated
+
+import sqlalchemy
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
 
 from social_media_fapi.database import comment_table, database, like_table, post_table
 from social_media_fapi.models.post import (
@@ -17,6 +18,7 @@ from social_media_fapi.models.post import (
 )
 from social_media_fapi.models.user import User
 from social_media_fapi.security import get_current_user
+from social_media_fapi.tasks import generate_and_add_to_post
 
 router = APIRouter()
 
@@ -40,7 +42,11 @@ async def find_post(post_id: int):
 
 @router.post("/post", response_model=UserPost, status_code=201)
 async def create_post(
-    post: UserPostIn, current_user: Annotated[User, Depends(get_current_user)]
+    post: UserPostIn,
+    current_user: Annotated[User, Depends(get_current_user)],
+    background_tasks: BackgroundTasks,
+    request: Request,
+    prompt: str = None,
 ) -> UserPost:
     logger.info("Creating post")
 
@@ -51,6 +57,17 @@ async def create_post(
 
     logger.debug(query)
     last_record_id = await database.execute(query)
+
+    if prompt:
+        background_tasks.add_task(
+            generate_and_add_to_post,
+            current_user.email,
+            last_record_id,
+            request.url_for("get_post_with_comments", post_id=last_record_id),
+            database,
+            prompt
+        )
+
     return {**data, "id": last_record_id}
 
 

@@ -13,6 +13,7 @@ from social_media_fapi.database import database, user_table  # noqa: E402
 
 # the # noqa: E402  tells the ruff linter to ignore the rule to put this import to the top of hte file.
 from social_media_fapi.main import app  # noqa: E402
+from social_media_fapi.tests.helpers import create_post  # noqa: E402
 
 
 # This will be run once for all our test session
@@ -36,7 +37,7 @@ def client() -> Generator:
 @pytest.fixture(autouse=True)
 async def db() -> AsyncGenerator:
     await database.connect()
-    yield
+    yield database
     await database.disconnect()
 
 
@@ -88,3 +89,8 @@ def mock_httpx_client(mocker):
     mocked_client.return_value.__aenter__.return_value = mocked_async_client
 
     return mocked_async_client
+
+
+@pytest.fixture()
+async def created_post(async_client: AsyncClient, logged_in_token: str):
+    return await create_post("Test Post", async_client, logged_in_token)
